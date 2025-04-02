@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Title -->
+    <title>StopWatch</title>
+    <!-- Custom Css -->
+    <link rel="stylesheet" href="style.css">
+    <!-- BoxIcon -->
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <!-- favicon -->
+    <link rel="shortcut icon" href="favicon.png" type="image/x-icon">
+
+</head>
+
+<body>
+    <div class="bloob"></div>
+    <div class="bloob2"></div>
+    <div class="stopwatch">
+        <header>
+            <p>StopWatch</p>
+            <div class="line"></div>
+        </header>
+
+        <div class="stopwatch__display">
+            <span id="display__hour">00</span>:
+            <span id="display__minute">00</span>:
+            <span id="display__second">00</span>:
+            <span id="display__millisecond">00</span>
+        </div>
+        <div class="stopwatch__controls">
+            <button id="reset-button">
+                <i class='bx bx-reset'></i>
+                <span>reset</span>
+            </button>
+            <button id="start-button">
+                <i class='bx bx-play'></i>
+                <span>start</span>
+            </button>
+            <button id="stop-button">
+                <i class='bx bx-stop'></i>
+                <span>stop</span>
+            </button>
+        </div>
+    </div>
+
+
+
+
+    <!-- JavaScript -->
+    <script src="app.js"></script>
+</body>
+
+</html>
