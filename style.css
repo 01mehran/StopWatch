@@ -13,6 +13,9 @@ body {
   background-color: #242424;
   color: aliceblue;
 }
+button {
+  -webkit-tap-highlight-color: transparent;
+}
 
 .bloob {
   content: "";
