@@ -9,7 +9,6 @@ const display__minute = document.querySelector("#display__minute");
 const display__second = document.querySelector("#display__second");
 const display__millisecond = document.querySelector("#display__millisecond");
 
-
 let [milseconds, seconds, minutes, hours] = [0, 0, 0, 0];
 let timer = null;
 

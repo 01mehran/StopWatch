@@ -4,6 +4,6 @@
 
 ### You can see my online demo below down 👇.
 
-![my Output](./output.png)
+![my Output](./assets/output.png)
 
 ## Click [here](https://stop-watch-sigma-six.vercel.app/) to see my online Demo.
