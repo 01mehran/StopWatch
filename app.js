@@ -1,4 +1,5 @@
 "use strict";
+
 // Selecting Elements;
 const startButton = document.querySelector("#start-button");
 const stopButton = document.querySelector("#stop-button");
@@ -14,24 +15,24 @@ let timer = null;
 
 function stopWatch() {
   milseconds++;
-  if (milseconds == 99) {
+  if (milseconds === 99) {
     milseconds = 0;
     seconds++;
-    if (seconds == 60) {
+    if (seconds === 60) {
       seconds = 0;
       minutes++;
-      if (minutes == 60) {
+      if (minutes === 60) {
         minutes = 0;
         hours++;
       }
     }
   }
 
-  display__hour.innerHTML = hours < 10 ? "0" + hours : hours;
-  display__minute.innerHTML = minutes < 10 ? "0" + minutes : minutes;
-  display__second.innerHTML = seconds < 10 ? "0" + seconds : seconds;
+  display__hour.innerHTML = hours < 10 ? `0${hours}` : hours;
+  display__minute.innerHTML = minutes < 10 ? `0${minutes}` : minutes;
+  display__second.innerHTML = seconds < 10 ? `0${seconds}` : seconds;
   display__millisecond.innerHTML =
-    milseconds < 10 ? "0" + milseconds : milseconds;
+    milseconds < 10 ? `0${milseconds}` : milseconds;
 }
 
 function start() {
@@ -47,7 +48,9 @@ function stop() {
 
 function reset() {
   [milseconds, seconds, minutes, hours] = [0, 0, 0, 0];
+
   clearInterval(timer);
+
   display__hour.innerHTML = `0${hours}`;
   display__minute.innerHTML = `0${minutes}`;
   display__second.innerHTML = `0${seconds}`;
