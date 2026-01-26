@@ -1,6 +1,6 @@
 "use strict";
 
-// Selecting Elements;
+// Select Elements;
 const startButton = document.querySelector("#start-button");
 const stopButton = document.querySelector("#stop-button");
 const resetButton = document.querySelector("#reset-button");
@@ -15,12 +15,15 @@ let timer = null;
 
 function stopWatch() {
   milseconds++;
+
   if (milseconds === 99) {
     milseconds = 0;
     seconds++;
+
     if (seconds === 60) {
       seconds = 0;
       minutes++;
+
       if (minutes === 60) {
         minutes = 0;
         hours++;
@@ -35,28 +38,30 @@ function stopWatch() {
     milseconds < 10 ? `0${milseconds}` : milseconds;
 }
 
-function start() {
+function startStopWatch() {
   if (timer !== null) {
     clearInterval(timer);
   }
-  timer = setInterval(stopWatch, 10);
+
+  timer = setInterval(stopWatch, 100);
 }
 
-function stop() {
+function stopStopWatch() {
   clearInterval(timer);
 }
 
-function reset() {
+function resetstopStopWatch() {
   [milseconds, seconds, minutes, hours] = [0, 0, 0, 0];
 
   clearInterval(timer);
 
-  display__hour.innerHTML = `0${hours}`;
-  display__minute.innerHTML = `0${minutes}`;
-  display__second.innerHTML = `0${seconds}`;
-  display__millisecond.innerHTML = `0${milseconds}`;
+  display__hour.innerHTML = "00";
+  display__minute.innerHTML = "00";
+  display__second.innerHTML = "00";
+  display__millisecond.innerHTML = "00";
 }
 
-startButton.addEventListener("click", start);
-stopButton.addEventListener("click", stop);
-resetButton.addEventListener("click", reset);
+// Listeners;
+startButton.addEventListener("click", startStopWatch);
+stopButton.addEventListener("click", stopStopWatch);
+resetButton.addEventListener("click", resetstopStopWatch);
